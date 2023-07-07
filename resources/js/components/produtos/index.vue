@@ -42,17 +42,12 @@
         router.push('/marcas');
     }
 
-    
-
 </script>
-
 
 
 <template>
     <div class="container">
-        
         <div class="itens">
-        
         <div class="card__header">
             <div>
                 <h2 class="itens__title">Produtos</h2>
@@ -63,7 +58,6 @@
                 </a>
             </div>
         </div>
-
         <div class="table card__content">
             <div class="table--filter">
                 <span class="table--filter--collapseBtn ">
@@ -84,7 +78,6 @@
                     </ul>
                 </div>
             </div>
-
             <div class="table--search">
                 <div class="table--search--wrapper">
                     <select class="table--search--select" name="" id="" disabled>
@@ -95,7 +88,6 @@
                     <input class="table--search--input" type="text" placeholder="Filtre os produtos por nome" v-model="searchProdutos" @keyup="search()">
                 </div>
             </div>
-
             <div class="table--heading">
                 <p>ID</p>
                 <p>Nome</p>
@@ -103,8 +95,6 @@
                 <p>Preço</p>
                 <p>Ações</p>
             </div>
-
-            <!-- item 1 -->
             <div class="table--items" v-for="item in produtos" :key = "item.id" v-if="produtos.length > 0">
                 <p>{{item.id}}</p>
                 <p>{{item.nome}}</p>
@@ -112,10 +102,7 @@
                     {{item.marca.nome}}
                 </p>
                 <p v-else> - </p>
-                
                 <p>R$ {{item.preco}}</p>
-                
-                <!-- <p>{{moment(item.updated_at).format('DD/MM/YYYY HH:mm')}}</p> -->
                 <div class="acoes">
                     <a class="btn btn-secondary button btn-add" @click="onEdit(item.id)">
                         Editar
@@ -129,10 +116,7 @@
                 <p>Não Existem produtos cadastrados</p>
             </div>
         </div>
-        
     </div>
-
     <br><br><br>
-
     </div>
 </template>

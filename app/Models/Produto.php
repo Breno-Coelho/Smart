@@ -23,7 +23,4 @@ class Produto extends Model
         return $this->hasOne(Marca::class, 'id', 'id_marca');
     }
 
-    // public function marca(){
-    //     return $this->belongsTo(Marca::class);
-    // }
 }

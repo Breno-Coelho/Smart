@@ -7,7 +7,6 @@
 
     const router = useRouter();
 
-    
     let form = ref({
         id:'',
     })
@@ -45,13 +44,11 @@
         axios.post(`/api/update_produto/${form.value.id}`, formData)
         router.push('/')
     }
-
 </script>
 
 <template>
     <div class="container">
         <div class="itens">
-        
         <div class="card__header">
             <div>
                 <h2 class="itens__title">Editar Produto</h2>
@@ -60,7 +57,6 @@
                 
             </div>
         </div>
-
         <div class="card__content">
             <div class="card__content--header">
                 <div>
@@ -79,14 +75,10 @@
                     <input type="number" pattern="[0-9]*" oninput="this.value=this.value.replace(/[^0-9]/g,'')" class="input" v-model="form.preco">
                 </div>
             </div>
-            <br><br>
-            
-
-           
+            <br><br> 
         </div>
         <div class="card__header" style="margin-top: 40px;">
             <div>
-                
             </div>
             <div>
                 <a class="btn btn-secondary" @click="onEdit()">
@@ -94,10 +86,7 @@
                 </a>
             </div>
         </div>
-        
     </div>
-    
     <br><br><br>
-
     </div>
 </template>

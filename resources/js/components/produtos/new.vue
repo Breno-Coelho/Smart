@@ -6,7 +6,6 @@
 
     const router = useRouter();
 
-    let form = ref([])
     let allMarcas = ref([])
     let marca_id = ref([])
     let nome = ref([])
@@ -30,23 +29,18 @@
         axios.post('/api/add_produto', formData) 
         router.push('/')
     }
-
-
 </script>
 
 <template>
     <div class="container">
         <div class="itens">
-        
         <div class="card__header">
             <div>
                 <h2 class="itens__title">Novo Produto</h2>
             </div>
-            <div>
-                
+            <div>   
             </div>
         </div>
-
         <div class="card__content">
             <div class="card__content--header">
                 <div>
@@ -65,14 +59,10 @@
                     <input type="number" pattern="[0-9]*" oninput="this.value=this.value.replace(/[^0-9]/g,'')" class="input" v-model="preco">
                 </div>
             </div>
-            <br><br>
-            
-
-           
+            <br><br> 
         </div>
         <div class="card__header" style="margin-top: 40px;">
-            <div>
-                
+            <div> 
             </div>
             <div>
                 <a class="btn btn-secondary" @click="onSave()">
@@ -80,9 +70,7 @@
                 </a>
             </div>
         </div>
-        
     </div>
-    
     <br><br><br>
     </div>
 </template>

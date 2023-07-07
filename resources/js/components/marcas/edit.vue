@@ -27,7 +27,6 @@
         let res = await axios.get('/api/edit_marcas/'+props.id)
         form.value = res.data.marca
     }
-
     
     const onEdit = async () => {
         const formData = new FormData()
@@ -42,19 +41,15 @@
 <template>
     <div class="container">
         <div class="itens">
-        
         <div class="card__header">
             <div>
                 <h2 class="itens__title">Editar Produto</h2>
             </div>
             <div>
-                
             </div>
         </div>
-
         <div class="card__content">
             <div class="card__content--header marca">
-                
                 <div>
                     <p class="my-1">Descrição</p> 
                     <input type="text" class="input" v-model="form.nome"> 
@@ -62,9 +57,6 @@
             
             </div>
             <br><br>
-            
-
-           
         </div>
         <div class="card__header" style="margin-top: 40px;">
             <div>
@@ -76,10 +68,7 @@
                 </a>
             </div>
         </div>
-        
     </div>
-    
     <br><br><br>
-
     </div>
 </template>

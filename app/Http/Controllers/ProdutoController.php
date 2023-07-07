@@ -28,15 +28,12 @@ class ProdutoController extends Controller
         }
     }
 
-
     public function add_produto(Request $request){
-
         $dados_produto['id_marca'] = $request->input('marca_id');
         $dados_produto['nome'] = $request->input('nome');
         $dados_produto['preco'] = $request->input('preco');
 
         $produto = Produto::create($dados_produto);
-
     }
 
     public function edit_produto($id){
@@ -48,7 +45,6 @@ class ProdutoController extends Controller
 
     public function update_produto(Request $request, $id){
         $produto = Produto::where('id', $id)->first();
-
 
         $produto->nome = $request->nome;
         $produto->preco = $request->preco;

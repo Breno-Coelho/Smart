@@ -56,9 +56,7 @@
 
 <template>
     <div class="container">
-        
         <div class="itens">
-        
         <div class="card__header">
             <div>
                 <h2 class="itens__title">Marcas</h2>
@@ -69,7 +67,6 @@
                 </a>
             </div>
         </div>
-
         <div class="table card__content">
             <div class="table--filter">
                 <span class="table--filter--collapseBtn ">
@@ -90,7 +87,6 @@
                     </ul>
                 </div>
             </div>
-
             <div class="table--search">
                 <div class="table--search--wrapper">
                     <select class="table--search--select" name="" id="" disabled>
@@ -101,14 +97,11 @@
                     <input class="table--search--input" type="text" placeholder="Filtre as marcas por nome" v-model="searchMarcas" @keyup="search()">
                 </div>
             </div>
-
             <div class="table--heading">
                 <p>ID</p>
                 <p>Nome</p>
                 <p>Ações</p>
             </div>
-
-            <!-- item 1 -->
             <div class="table--items" v-for="item in marcas" :key = "item.id" v-if="marcas.length > 0">
                 <p>{{item.id}}</p>
                 <p>{{item.nome}}</p>
@@ -126,10 +119,7 @@
                 <p>Não Existem marcas cadastradas</p>
             </div>
         </div>
-        
     </div>
-
     <br><br><br>
-
     </div>
 </template>
